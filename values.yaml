@@ -1,0 +1,38 @@
+krush-env:
+  displayName: Development
+  name: dev
+  destination:
+    name: in-cluster
+    namespace: dev
+
+  applications:
+    donors-web:
+      name: donors-web
+      path: "chart/donors-web"
+      repoURL: https://github.com/mrinalvirnave/donors-web.git
+      targetRevision: HEAD
+      valueFiles: []
+      values:
+        ingress:
+          annotations: 
+          - cert-manager.io/cluster-issuer=letsencrypt-staging
+          hosts:
+          - host: donors-web.demo.krush.cloud
+            paths:
+          - path: "/"
+            pathType: ImplementationSpecific
+    donors:
+      name: donors
+      path: "chart/donors"
+      repoURL: https://github.com/mrinalvirnave/donors.git
+      targetRevision: HEAD
+      valueFiles: []
+      values:
+        ingress:
+          annotations: 
+          - cert-manager.io/cluster-issuer=letsencrypt-staging
+          hosts:
+          - host: donors.demo.krush.cloud
+            paths:
+          - path: "/"
+            pathType: ImplementationSpecific
