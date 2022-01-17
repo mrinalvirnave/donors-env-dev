@@ -19,8 +19,8 @@ krush-env:
           hosts:
           - host: donors-web.demo.krush.cloud
             paths:
-          - path: "/"
-            pathType: ImplementationSpecific
+            - path: "/"
+              pathType: ImplementationSpecific
     donors:
       name: donors
       path: "chart/donors"
@@ -34,5 +34,5 @@ krush-env:
           hosts:
           - host: donors.demo.krush.cloud
             paths:
-          - path: "/"
-            pathType: ImplementationSpecific
+            - path: "/"
+              pathType: ImplementationSpecific
