@@ -8,7 +8,7 @@ krush-env:
   applications:
     donors-web:
       name: donors-web
-      path: "chart/donors-web"
+      path: "/chart/donors-web"
       repoURL: https://github.com/mrinalvirnave/donors-web.git
       targetRevision: HEAD
       valueFiles: []
@@ -23,7 +23,7 @@ krush-env:
               pathType: ImplementationSpecific
     donors:
       name: donors
-      path: "chart/donors"
+      path: "/chart/donors"
       repoURL: https://github.com/mrinalvirnave/donors.git
       targetRevision: HEAD
       valueFiles: []
